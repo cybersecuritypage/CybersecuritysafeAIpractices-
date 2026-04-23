@@ -239,13 +239,13 @@ header {
 }
  
 .label-list li p {
-  margin: 4px 0 0;     /* reduces space under bold title */
+  margin: 4px 0 0;     
 }
  
 .label-list li strong {
   display: block;
-  margin-bottom: 6px; /* controls space BETWEEN bullets */
-  line-height: 1.35;  /* slightly tighter text */
+  margin-bottom: 6px; 
+  line-height: 1.35; 
  
 }
  
@@ -272,31 +272,14 @@ button {
   transition: transform .2s ease;
 }
  
-/* LEARN MORE BUTTON - LARGER */
+
 .learn-more-btn {
-  padding: 14px 24px;     /* bigger click area */
-  font-size: 1rem;      /* larger text */      
+  padding: 14px 24px;     
+  font-size: 1rem;     
 }
  
 button:hover { transform: scale(1.05); }
  
-/* PASSWORD CHECKER */
-.password-checker input {
-  width: 100%;
-  padding: 12px;
-  font-size: 16px;
-  margin-bottom: 15px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-}
- 
- 
-@media (max-width: 768px) {
-  .password-checker {
-    grid-template-columns: 1fr;
-  }
-}
  
 .hint-text {
   background: #f3f8ff;
@@ -310,19 +293,6 @@ button:hover { transform: scale(1.05); }
 }
  
  
-.password-field input {
-  border: 2px solid #6b7280; /* darker gray border */
-}
- 
- 
-.password-strength {
-  background: #e6e9f0;
-  height: 8px;
-  border-radius: 6px;
-  overflow: hidden;
-  margin-top: 10px;
-}
- 
 .strength-bar {
   height: 100%;
   width: 0%;
@@ -335,29 +305,7 @@ button:hover { transform: scale(1.05); }
   margin-top: 6px;
 }
  
- 
-.password-rules {
-  list-style: none;
-  margin-top: 16px;
-  padding-left: 4px;
- 
-}
- 
-.password-rules li {
-  margin: 8px 0;
-  font-weight: 500;
-   transition: color 0.3s ease, transform 0.2s ease;
-}
- 
-.password-rules li.valid {
-  color: var(--green);
-  transform: translateX(4px);
-}
- 
-.show-password-btn {
-  background :var(--green);
-  margin-top: 8px;
-}
+
  
 .quiz button {
   width: 100%;
@@ -471,7 +419,7 @@ footer {
  
 <body>
  
-<!-- PHISHING EXPLANATION MODAL -->
+<!-- MODAL -->
 <div id="phishModal" class="modal-overlay hidden">
   <div class="modal-box">
     <p id="modalText"></p>
@@ -484,14 +432,14 @@ footer {
   <header>
     <div class="header-card">
       <h1>Safe AI Practices</h1>
-      <p>How to create strong passwords and manage them securely</p>
+      <p>Understanding safe, responsible, and secure AI use</p>
     </div>
   </header>
 </div>
  
 <!-- ===============================
-     AWARENESS & PREVENTION
-================================ -->
+PROMPT EFFECTIVELY
+ ================================ -->
 <section class="content-block">
  
   <div class="section-header">
@@ -501,25 +449,25 @@ footer {
   </div>
   <div class="highlights">
     <div class="highlight-box">
-      <i class="fa-solid fa-dumbbell"></i>
+      <i class="fa-solid fa-location-crosshairs"></i>
       <h3>Clear Purpose</h3>
       <p>State exactly what you want AI to do or produce so the response is focused and relevant.</p>
     </div>
  
     <div class="highlight-box">
-      <i class="fa-solid fa-shuffle"></i>
+      <i class="fa-solid fa-bezier-curve"></i>
       <h3>Provide Context</h3>
-      <p>Give AI relevant background, goals, and constraints so it understands your situation and responds appropriately.</p>
+      <p>Give AI relevant background on your audience and constraints so it responds appropriately.</p>
     </div>
  
     <div class="highlight-box">
-      <i class="fa-solid fa-fingerprint"></i>
+      <i class="fa-solid fa-sheet-plastic"></i>
       <h3>Reasoning or Sources </h3>
       <p>Ask AI to explain its approach or cite sources so you can understand, verify and trust the response.</p>
     </div>
  
     <div class="highlight-box">
-      <i class="fa-solid fa-lock"></i>
+      <i class="fa-solid fa-handshake"></i>
       <h3>Transparency and Trust</h3>
       <p>Use AI to explore information and options, not to make final decisions or judgments for you.</p>
     </div>
@@ -536,7 +484,7 @@ footer {
     <div class="box-header">
       <h2>
         <i class="fa-solid fa-key"></i>
-        Understanding MFA and Password Managers
+       How AI Fails, Why It Matters, and How to Use It Responsibly
       </h2>
  
       <button class="learn-more-btn" onclick="toggle('mfa-info')">
@@ -549,79 +497,53 @@ footer {
  
         <div class="text-contentLM">
           <p>
-            Strong account security goes beyond using a password.
-            Tools like Multi‑Factor Authentication (MFA) and password managers
-            add extra layers of protection against unauthorized access.
+            AI tools like Microsoft Copilot Chat can support brainstorming, drafting, and summarizing. 
+            But AI does not understand meaning or truth the way people do. It identifies patterns in data, 
+            which means it may sometimes produce confident and polished answers that are incorrect.
           </p>
  
-          <p class="subtitle">What Is Multi‑Factor Authentication (MFA)?</p>
+          <p class="subtitle">1. AI can produce inaccurate information: </p>
  
           <p>
-            Multi‑Factor Authentication (MFA) requires more than one way to verify
-            your identity when signing in. Even if a password is stolen,
-            MFA helps prevent attackers from accessing the account.
+            AI does not evaluate whether information is true, current, or credible. Instead, 
+            it predicts what text is most likely to come next based on patterns in existing data. 
           </p>
+
+          <p><strong>What to do:</strong> Ask the AI to provide citations or references when appropriate. Review the sources and 
+            verify the information using trusted resources.</p>
+
+          <p class="subtitle">2. AI can reflect bias or generate harmful content: </p>
  
-          <ul class="label-list">
-            <li><strong>Something you know:</strong> a password or PIN</li>
-            <li><strong>Something you have:</strong> a phone, security key, or authenticator app</li>
-            <li><strong>Something you are:</strong> biometrics such as fingerprint or face recognition</li>
-          </ul>
- 
-          <p>
-            Common authenticator apps include
-            <strong>Microsoft Authenticator</strong> and
-            <strong>Google Authenticator</strong>.
+          <p>AI systems are trained on large amounts of publicly available data, including content from the internet. Because that data can reflect societal biases, 
+            AI generated outputs may unintentionally repeat or amplify them.
           </p>
+
+          <p><strong>What to do:</strong> All AI generated content should be reviewed for inclusivity, 
+            and tone.</p>
+          
+          <p class="subtitle">3. Not all AI tools protect privacy: </p>
  
-          <p class="subtitle">What Is a Password Manager?</p>
- 
-          <p>
-            A password manager keeps all passwords safe in one encrypted vault, unlocked with one strong password.
+          <p>Publicly available AI tools may not meet expectations of confidentiality. 
+            In some cases, user inputs may be stored or used to improve the tool over time. 
           </p>
+
+          <p><strong>What to do:</strong> Use approved workplace AI tools such as Microsoft Copilot for work related tasks, as they are designed to protect privacy and confidentiality. 
+            When using other AI tools for personal purposes, avoid entering personal, sensitive,
+             or confidential information. </p>
  
+      
  
-          <p class="subtitle">Common Types of Password Managers</p>
- 
-          <ul class="label-list">
-            <li>
-              <strong>Dedicated password manager apps</strong>
-              <p>
-                Standalone tools designed to securely store and generate passwords
-                across devices using encryption and often MFA.
-                <em>Examples: 1Password, LastPass</em>
-              </p>
-            </li>
- 
-            <li>
-              <strong>Browser‑based password managers</strong>
-              <p>
-                Built into web browsers such as Chrome, Edge, Firefox, and Safari/iCloud
-                Keychain. Their security depends on how well the browser and device
-                are protected, especially on shared devices.
-              </p>
-            </li>
- 
-            <li>
-              <strong>Device or operating‑system password managers</strong>
-              <p>
-                Tools built into phones and operating systems (such as iOS and Android)
-                that sync passwords across linked devices.
-              </p>
-            </li>
-          </ul>
- 
-          <p class="subtitle">Important Note for Work Accounts</p>
+          <p class="subtitle"><strong>The bottom line</strong></p>
  
           <p>
-            While MFA and password managers are commonly used for personal accounts,
-            workplace accounts must always follow organizational policies and use
-            approved tools.
+            AI can save time and support creativity, but it doesn’t replace human judgment. 
+            People remain responsible for checking accuracy, identifying bias, protecting privacy, 
+            and deciding what is appropriate to share.
           </p>
         </div>
  
         <div class="image-content">
-          <img src="pass.jpg" alt="Illustration showing account security concepts" />
+          <img src="image6.png" alt="Illustration showing account security concepts" />
         </div>
  
       </div>
@@ -634,7 +556,7 @@ footer {
 
  
  <!-- ===============================
-     PHISHING SIMULATOR
+     AI SIMULATOR
 ================================ -->
 <section class="content-block">
  
@@ -647,7 +569,7 @@ footer {
   <section>
     <div class="box">
  
-      <p><strong>Instruction:</strong> Review this AI‑generated draft and select all potential risks that apply: </p>
+      <p><strong>Instructions:</strong> Review this AI‑generated draft and select all potential risks that apply: </p>
       <ul><li>Possible factual error</li>
         <li>Potential bias or tone issue</li>
         <li>Missing context or verification</li>
@@ -662,29 +584,29 @@ footer {
           
         <hr>
  
-        <p>Thank you for contacting us regarding the Ontario Land Tribunal (OLT) process.</p>
+        <p>Thank you for contacting us regarding the Agency process.</p>
  
         <p>
           <span class="phish-flag" data-reason="Factual error: Filing completeness does not determine how an application proceeds or its merits.">
-            Once an appeal is submitted, it is generally accepted by the OLT as long as the required forms are completed correctly. 
+            Once an application is submitted, it is generally accepted by the Agency as long as the required forms are completed correctly. 
           </span>
         </p>
  
         <p>
           <span class="phish-flag" data-reason="Over‑generalization of timelines and missing context does not clarify that applicants may still have ongoing responsibilities.">
-            The OLT often aims to resolve matters efficiently, and in many cases decisions are issued within a few weeks.
+            The Agency often aims to resolve matters efficiently, and in many cases decisions are issued within a few weeks.
           </span>
-          As a result, you may not be required to take any further action unless the Tribunal specifically requests additional information. 
+          As a result, you may not be required to take any further action unless the Agency specifically requests additional information. 
         </p>
 
         <p>
           <span class="phish-flag" data-reason="Tone / bias issue: This language subtly dismisses stakeholder concerns and frames them as misinformed, rather than acknowledging them as valid perspectives requiring respectful engagement.">
-           While stakeholders sometimes raise concerns about how the process applies to their situation, these concerns tend to reflect misunderstandings of the OLT’s role rather than issues with the process itself.
+           While stakeholders sometimes raise concerns about how the process applies to their situation, these concerns tend to reflect misunderstandings of the Agency’s role rather than issues with the process itself.
           </span>
         </p>
         <p>
           <span class="phish-flag" data-reason="Missing context / incomplete guidance: This statement lacks explanation or qualification. It does not address limits, exceptions, or how decisions may apply differently depending on circumstances.">
-          You can expect that the OLT’s decision will apply province‑wide and should provide clarity for all parties involved.
+          You can expect that the Agency’s decision will apply province‑wide and should provide clarity for all parties involved.
         </p>
 
         <hr>
@@ -747,7 +669,7 @@ footer {
          False
       </button>
 
-      <p><b>4. If AI‑generated content is copied verbatim or nearly verbatim into an official OPS document, transparency about Copilot use is generally appropriate. </b></p>
+      <p><b>4. If AI‑generated content is copied verbatim or nearly verbatim into an official document, transparency about Copilot use is generally appropriate. </b></p>
       <button onclick="correct(this)">True</button>
       <button onclick="wrong(this)">False</button>
      
